@@ -54,12 +54,15 @@ function wwRefreshDashboard() {
  */
 function wwPostDueBills() {
 
-  SpreadsheetApp.getUi().alert(
-    "Bill posting will be available after Posting.gs is installed."
+  const posted = wwProcessDueBills();
+
+  SpreadsheetApp.getActiveSpreadsheet().toast(
+    posted + " bill(s) posted.",
+    "Winton Wallet",
+    5
   );
 
 }
-
 /**
  * Placeholder until Register.gs is implemented.
  */
