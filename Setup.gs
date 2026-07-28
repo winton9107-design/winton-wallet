@@ -340,8 +340,6 @@ function wwInstall() {
   wwSetupWorkbook();
   wwInitializeDefaults();
 
-  SpreadsheetApp.getUi().alert(
-    WW.APP.NAME + " has been successfully installed!"
-  );
+  Logger.log(WW.APP.NAME + " installed successfully.");
 
 }
